@@ -15,6 +15,11 @@ addons:
         packages:
             - cmake-data
             - cmake
-before_install:
+install:
     - sudo apt-get -y install libpfm4-dev
+before_script:
     - export CC=gcc-4.9 && CXX=g++-4.9
+    - mkdir build && cd build
+    - cmake ../
+script:
+    - make
