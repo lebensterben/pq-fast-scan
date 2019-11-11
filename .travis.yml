@@ -1,0 +1,20 @@
+language: cpp
+sudo: required
+compiler: g++
+os: linux
+dist: trusty
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-4.9
+    apt:
+        sources:
+            - george-edison55-precise-backports
+        packages:
+            - cmake-data
+            - cmake
+before_install:
+    - sudo apt-get -y install libpfm4-dev
+    - export CC=gcc-4.9 && CXX=g++-4.9
