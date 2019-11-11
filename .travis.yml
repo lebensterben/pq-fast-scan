@@ -18,7 +18,7 @@ addons:
 install:
     - sudo apt-get -y install libpfm4-dev
 before_script:
-    - export CC=gcc-4.9 && CXX=g++-4.9
+    - export CC=gcc && CXX=g++
     - mkdir build && cd build
     - cmake ../
 script:
