@@ -35,5 +35,3 @@ deploy:
         - "pqfastscan"
         - "pqsca"
     skip_cleanup: true
-    on:
-        tags: true
